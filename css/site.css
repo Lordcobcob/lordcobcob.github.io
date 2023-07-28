@@ -1,13 +1,27 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
+﻿/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #222831;
+  }
+  
+  /* Navbar styles */
+  a.navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
-}
-
-.form-control {
+    color: #9aff8b;
+  }
+  
+  /* Form styles */
+  .form-control {
     display: block;
     width: 100%;
     height: calc(1.5em + .75rem + 2px);
@@ -15,154 +29,119 @@ a.navbar-brand {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #2885e2;
-    background-color: #f9f6f6;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
+    color: #fff;
+    background-color: #222831; /* Primary color */
+    border: 2px solid #7909ad; /* Orange outline */
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     text-align: center;
-}
-
-
-.bg-white {
-    /*    background-color: #58CC02 !important;
-*/
-    /* From https://css.glass */
-    background: rgba(83, 183, 202, 0.6);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.2px);
-    -webkit-backdrop-filter: blur(7.2px);
-    border-bottom: 1px solid rgba(83, 183, 202, 0.4);
-}
-
-
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    font-size: 14px;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-.border-top {
-    border-top: 1px solid #e5e5e5;
-}
-
-.border-bottom {
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-    font-size: 1rem;
-    line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
+  }
+  
+  /* Border styles */
+  .border-bottom {
+    border-bottom: 1px solid #7909ad; /* Orange outline */
+  }
+  
+  /* Link styles */
+  a {
+    color: #9aff8b;
+  }
+  
+  /* Primary button styles */
+  .btn-primary {
+    color: #fff;
+    background-color: #222831; /* Primary color */
+    border: none;
+  }
+  
+  /* Active nav link styles */
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #222831; /* Primary color */
+    border: none;
+  }
+  
+  /* Sticky footer styles */
+  html {
     position: relative;
     min-height: 100%;
-}
-
-body {
+  }
+  
+  body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-image: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
-    background-size: auto auto;
-    background-repeat: no-repeat;
-}
-
-.footer {
+  }
+  
+  .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
+  }
+  
+  /* Card styles */
+.card {
+  background: #222831; /* Primary color */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #7909ad; /* Original orange outline */
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
 }
 
-.card {
-    /* From https://css.glass */
-    background: rgba(83, 183, 202, 0.19);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.2px);
-    -webkit-backdrop-filter: blur(7.2px);
-    border: 1px solid rgba(83, 183, 202, 0.4);
+.card:hover {
+  box-shadow: 0 0 20px #7909ad, 0 0 40px #7909ad, 0 0 80px #7909ad; /* Neon glow effect */
 }
 
 .card-header {
-    background: rgba(83, 183, 202, 0.30);
-    border-radius: 16px !important;
+  background: #222831; /* Primary color */
+  border-radius: 16px !important;
 }
 
 .card-header:hover {
-    /* From https://css.glass */
-    cursor: pointer;
-    background: rgba(83, 183, 202, 0.80);
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+  cursor: pointer;
+  background: #222831; /* Primary color */
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 0 20px #7909ad, 0 0 40px #7909ad, 0 0 80px #7909ad; /* Neon glow effect */
 }
-
-section {
-    background-color: transparent !important;
-}
-
-.search-box {
+  
+  /* Section styles */
+  section {
+    background-color: #222831; /* Primary color */
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
+  /* Search box styles */
+  .search-box {
     width: 50%;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -20px;
-}
-
-.search-box .search-bar {
-    display: block;
+    max-width: 300px; /* Set a maximum width to prevent it from being too wide */
+    margin: 50px auto 0; /* Simplify the margin property */
+  }
+  
+  .search-box .search-bar {
     width: 100%;
     padding: 15px;
-
     appearance: none;
     background: none;
     border: none;
     outline: none;
-
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 16px 16px 16px 16px;
-    margin-top: -25px;
-
+    background-color: #222831; /* Primary color */
+    border: 2px solid #752997; /* Orange outline */
+    border-radius: 16px;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
-
-    color: #313131;
+    color: #fff;
     font-size: 20px;
-
     transition: 0.4s ease;
-}
-
-.search-box .search-bar:focus {
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
-.svgFlag{
+  }
+  
+  .search-box .search-bar:focus {
+    background-color: #222831; /* Primary color */
+  }
+  
+  .svgFlag {
     height: 40px;
     width: 75px;
-}
-
-.btn-outline-primary {
-    cursor: pointer;
-    background: rgba(83, 183, 202, 0.80);
-    border-radius: 16px;
-    color: #fff
-}
-
-a {
-    color: #9aff8b;
-}
+    fill: #fff; /* If this is an SVG image, use "fill" property to change its color */
+  }
+  
